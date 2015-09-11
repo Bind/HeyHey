@@ -13,6 +13,9 @@
 		F97526811B9B7FB500465763 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F97526801B9B7FB500465763 /* Images.xcassets */; };
 		F97526841B9B7FB500465763 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97526821B9B7FB500465763 /* LaunchScreen.xib */; };
 		F97526901B9B7FB500465763 /* heyheyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F975268F1B9B7FB500465763 /* heyheyTests.swift */; };
+		F975269A1B9B8EA300465763 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97526991B9B8EA300465763 /* OrderViewController.swift */; };
+		F975269E1B9FC6B000465763 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F975269D1B9FC6B000465763 /* MapKit.framework */; };
+		F97526A01B9FC6F500465763 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F975269F1B9FC6F500465763 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		F97526891B9B7FB500465763 /* heyheyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heyheyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F975268E1B9B7FB500465763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F975268F1B9B7FB500465763 /* heyheyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heyheyTests.swift; sourceTree = "<group>"; };
+		F97526991B9B8EA300465763 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		F975269D1B9FC6B000465763 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F975269F1B9FC6F500465763 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97526A01B9FC6F500465763 /* CoreLocation.framework in Frameworks */,
+				F975269E1B9FC6B000465763 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 		F975266B1B9B7FB500465763 = {
 			isa = PBXGroup;
 			children = (
+				F975269F1B9FC6F500465763 /* CoreLocation.framework */,
+				F975269D1B9FC6B000465763 /* MapKit.framework */,
 				F97526761B9B7FB500465763 /* heyhey */,
 				F975268C1B9B7FB500465763 /* heyheyTests */,
 				F97526751B9B7FB500465763 /* Products */,
@@ -79,6 +89,7 @@
 			children = (
 				F97526791B9B7FB500465763 /* AppDelegate.swift */,
 				F975267B1B9B7FB500465763 /* ViewController.swift */,
+				F97526991B9B8EA300465763 /* OrderViewController.swift */,
 				F975267D1B9B7FB500465763 /* Main.storyboard */,
 				F97526801B9B7FB500465763 /* Images.xcassets */,
 				F97526821B9B7FB500465763 /* LaunchScreen.xib */,
@@ -161,6 +172,14 @@
 				TargetAttributes = {
 					F97526731B9B7FB500465763 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F97526881B9B7FB500465763 = {
 						CreatedOnToolsVersion = 6.4;
@@ -214,6 +233,7 @@
 			files = (
 				F975267C1B9B7FB500465763 /* ViewController.swift in Sources */,
 				F975267A1B9B7FB500465763 /* AppDelegate.swift in Sources */,
+				F975269A1B9B8EA300465763 /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +431,7 @@
 				F97526951B9B7FB500465763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F97526961B9B7FB500465763 /* Build configuration list for PBXNativeTarget "heyheyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +440,7 @@
 				F97526981B9B7FB500465763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
